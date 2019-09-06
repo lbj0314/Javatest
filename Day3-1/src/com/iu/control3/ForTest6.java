@@ -8,7 +8,6 @@ public class ForTest6 {
 		// 로그인, id, pw 입력하는 경우
 		int id = 1234;//가입한 아이디
 		int pw = 5678;//가입할때 쓴 암호
-		boolean sucess = false;
 		//로그인 과정 최대 5번
 		//로그인 성공시, 은행 업무 시작 출력
 		//로그인 실패시, 바로 종료
@@ -20,7 +19,6 @@ public class ForTest6 {
 			System.out.println("pw를 입력하세요.");
 			int cPw = sc.nextInt();
 			if(cId==id && cPw==pw) {
-				sucess = true;
 				i=5;
 				System.out.println("로그인 성공! 은행 업무를 시작하세요.");
 			}else {
