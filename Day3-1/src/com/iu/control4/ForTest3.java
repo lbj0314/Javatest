@@ -1,6 +1,6 @@
 package com.iu.control4;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ForTest3 {
 
