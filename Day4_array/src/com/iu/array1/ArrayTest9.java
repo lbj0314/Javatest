@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class ArrayTest9 {
 
-	private static int[] totals;
-	private static double[] avgs;
-
 	public static void main(String[] args) {
 		
 		// 과목 : 국어, 영어, 수학으로 고정
