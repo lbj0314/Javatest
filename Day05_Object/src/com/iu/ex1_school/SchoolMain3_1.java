@@ -16,6 +16,7 @@ public class SchoolMain3_1 {
 		//학생의 번호 입력
 		//해당 학생의 정보만 입력
 		//		4. 프로그램 종료				
+		
 
 		Scanner sc = new Scanner(System.in);
 		
