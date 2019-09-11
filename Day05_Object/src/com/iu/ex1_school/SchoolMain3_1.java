@@ -22,7 +22,12 @@ public class SchoolMain3_1 {
 		boolean check = true;
 		//학생들을 담을 배열 생성
 		Student2 [] students = null; // 값을 모르니 미리 선언
-
+		//전체 학생 조회 객체 생성
+		StudentView view = new StudentView();
+		//번호 일치한 학생 조회 객체 생성
+		StudentView search = new StudentView();
+		StudentInput input = new StudentInput();
+		
 		
 		
 		while(check) {
@@ -40,7 +45,7 @@ public class SchoolMain3_1 {
 
 				for (int i = 0; i < students.length; i++) {
 					stu = new Student2();//새로운 학생 생성
-					
+
 					System.out.println("학생의 이름을 입력하세요.");
 					stu.name = sc.next(); // 이름
 					System.out.println("학생의 번호를 입력하세요.");
@@ -54,41 +59,21 @@ public class SchoolMain3_1 {
 
 					stu.total = stu.lang + stu.eng + stu.math;
 					stu.avg = (double)stu.total/3;
-					
+
 					students[i] = stu;
 				}
 				break;
 			case 2:
-				System.out.println("전체 성적을 조회합니다.");
-				for (int i = 0; i <students.length; i++) {
-					System.out.println("이름 : "+students[i].name);
-					System.out.println("번호 : "+students[i].number);
-					System.out.println("국어 : "+students[i].lang);
-					System.out.println("영어 : "+students[i].eng);
-					System.out.println("수학 : "+students[i].math);
-					System.out.println("총점 : "+students[i].total);
-					System.out.println("평균 : "+students[i].avg);
-					System.out.println("==========================");
-				}//for
+				view.viewAll(students);
 				break;
 			case 3:
-				System.out.println("학생의 번호를 입력하세요.");
-				int search = sc.nextInt();
-				for(int i = 0; i < students.length; i++) {
-					if (search==stu.number) {
-						System.out.println("이름 : "+stu.name);
-						System.out.println("번호 : "+stu.number);
-						System.out.println("국어 : "+stu.lang);
-						System.out.println("영어 : "+stu.eng);
-						System.out.println("수학 : "+stu.math);
-						System.out.println("총점 : "+stu.total);
-						System.out.println("평균 : "+stu.avg);
-						System.out.println("==========================");
-					}
-				}
+				//findByNum이 실행되어야 함
+				Student2 student = input.findByNum(students);
+				search.viewOne(student);
+				
 				break;
 			default:
-				System.out.println("4. 종료");
+				System.out.println("프로그램을 종료합니다.");
 				check = false;
 
 			}//switch case

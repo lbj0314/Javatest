@@ -31,7 +31,7 @@ public class SchoolMain3 {
 			System.out.println("4. 프로그램 종료");
 			int select = sc.nextInt();
 			int i = 0;
-			
+
 			if(select==1) {
 				System.out.println("학생의 수를 입력하세요.");
 				select = sc.nextInt();
@@ -73,19 +73,25 @@ public class SchoolMain3 {
 
 			}else if(select==3) {
 				System.out.println("학생의 번호를 입력하세요.");
-				int search = sc.nextInt();
-				for(i = 0; i < 9999; i++) {
-					if (search==stu.number) {
-						System.out.println("이름 : "+stu.name);
-						System.out.println("번호 : "+stu.number);
-						System.out.println("국어 : "+stu.lang);
-						System.out.println("영어 : "+stu.eng);
-						System.out.println("수학 : "+stu.math);
-						System.out.println("총점 : "+stu.total);
-						System.out.println("평균 : "+stu.avg);
+				select = sc.nextInt(); //검색할 학생의 번호
+				boolean flag = false;//false면 못 찾은 것
+				for(i = 0; i < students.length; i++) {
+					if (select == students[i].number) {
+						System.out.println("이름 : "+students[i].name);
+						System.out.println("번호 : "+students[i].number);
+						System.out.println("국어 : "+students[i].lang);
+						System.out.println("영어 : "+students[i].eng);
+						System.out.println("수학 : "+students[i].math);
+						System.out.println("총점 : "+students[i].total);
+						System.out.println("평균 : "+students[i].avg);
 						System.out.println("==========================");
-						i = 9999;
-					}
+
+						flag = true;
+						break;
+					}//if
+				}//for
+				if(flag) {
+					System.out.println("해당 학생의 번호가 존재하지 않습니다.");
 				}
 			}else {
 				System.out.println("프로그램을 종료합니다.");
@@ -96,5 +102,5 @@ public class SchoolMain3 {
 		}//while
 
 
-	}
-}
+	}//main
+}//class
