@@ -44,7 +44,6 @@ public class StudentInput {
 
 		for (int i = 0; i < students.length; i++) {
 
-
 			Student2 stu = new Student2();//새로운 학생 생성
 
 			System.out.println("학생의 이름을 입력하세요.");

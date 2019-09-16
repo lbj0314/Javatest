@@ -5,14 +5,7 @@ public class StudentView {
 
 		System.out.println("전체 성적을 조회합니다.");
 		for (int i = 0; i <students.length; i++) {
-			System.out.println("이름 : "+students[i].name);
-			System.out.println("번호 : "+students[i].number);
-			System.out.println("국어 : "+students[i].lang);
-			System.out.println("영어 : "+students[i].eng);
-			System.out.println("수학 : "+students[i].math);
-			System.out.println("총점 : "+students[i].total);
-			System.out.println("평균 : "+students[i].avg);
-			System.out.println("==========================");
+			this.viewOne(students[i]);
 		}//for
 	}//viewAll
 
