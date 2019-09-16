@@ -6,7 +6,7 @@ public class CarInfo {
 	//carView
 	public void carView(Car car) {
 		
-		System.out.println("Company : "+car.company);
+		System.out.println("Company : "+Car.company);
 		System.out.println("Model : "+car.model);
 		System.out.println("Color : "+car.color);
 		System.out.println("Hp : "+car.hp);

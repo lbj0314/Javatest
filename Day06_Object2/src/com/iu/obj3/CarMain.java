@@ -12,7 +12,9 @@ public class CarMain {
 		Car car2 = new Car("Yellow");
 		Car car3 = new Car("Gray", 1000);
 		Car car4 = new Car("Bayron" ,"Gray", 1200);
+		Car.company = "Ferarri";
 		
+
 		carInfo.carView(car);
 		carInfo.carView(car2);
 		carInfo.carView(car3);
