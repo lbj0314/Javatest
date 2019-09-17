@@ -15,7 +15,7 @@ public class StudentInput {
 		Student2 student = null;
 
 		for (int i = 0; i < students.length; i++) {
-			if(select == students[i].number) {
+			if(select == students[i].getNumber()) {
 				student = students[i];
 				break;
 			}
@@ -47,18 +47,18 @@ public class StudentInput {
 			Student2 stu = new Student2();//새로운 학생 생성
 
 			System.out.println("학생의 이름을 입력하세요.");
-			stu.name = sc.next(); // 이름
+			stu.setName(sc.next()); // 이름
 			System.out.println("학생의 번호를 입력하세요.");
-			stu.number = sc.nextInt(); //번호
+			stu.setNumber(sc.nextInt()); //번호
 			System.out.println("국어 점수를 입력하세요.");
-			stu.lang = sc.nextInt(); //국어
+			stu.setLang(sc.nextInt()); //국어
 			System.out.println("영어 점수를 입력하세요.");
-			stu.eng = sc.nextInt(); //영어
+			stu.setEng(sc.nextInt()); //영어
 			System.out.println("수학 점수를 입력하세요.");
-			stu.math = sc.nextInt(); //수학
+			stu.setMath(sc.nextInt()); //수학
 
-			stu.total = stu.lang + stu.eng + stu.math;
-			stu.avg = (double)stu.total/3;
+			stu.setTotal(stu.getLang() + stu.getEng() + stu.getMath());
+			stu.setAvg((double)stu.getTotal()/3);
 
 			students[i] = stu;
 		}//for
@@ -74,7 +74,7 @@ public class StudentInput {
 		select = sc.nextInt(); //검색할 학생의 번호
 		int index = 0;
 		for(index = 0; index < students.length; index++) {
-			if(select == students[index].number) {
+			if(select == students[index].getNumber()) {
 				break;
 			}
 		}
@@ -88,13 +88,13 @@ public class StudentInput {
 			students2[idx] = students[i];
 			idx++;
 		}
-		students[select].name = students2[select].name;
-		students[select].number = students2[select].number;
-		students[select].lang = students2[select].lang;
-		students[select].eng = students2[select].eng;
-		students[select].math = students2[select].math;
-		students[select].total = students2[select].total;
-		students[select].avg = students2[select].avg;
+//		students[select].name = students2[select].name;
+//		students[select].number = students2[select].number;
+//		students[select].lang = students2[select].lang;
+//		students[select].eng = students2[select].eng;
+//		students[select].math = students2[select].math;
+//		students[select].total = students2[select].total;
+//		students[select].avg = students2[select].avg;
 		
 		for (int i = 0; i < students.length; i++) {
 			System.out.println(students[i]);

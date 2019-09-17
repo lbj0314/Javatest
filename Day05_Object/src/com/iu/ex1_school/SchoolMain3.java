@@ -41,18 +41,18 @@ public class SchoolMain3 {
 					stu = new Student2();//새로운 학생 생성
 
 					System.out.println("학생의 이름을 입력하세요.");
-					stu.name = sc.next(); // 이름
+					stu.setName(sc.next()); // 이름
 					System.out.println("학생의 번호를 입력하세요.");
-					stu.number = sc.nextInt(); //번호
+					stu.setNumber(sc.nextInt()); //번호
 					System.out.println("국어 점수를 입력하세요.");
-					stu.lang = sc.nextInt(); //국어
+					stu.setLang(sc.nextInt()); //국어
 					System.out.println("영어 점수를 입력하세요.");
-					stu.eng = sc.nextInt(); //영어
+					stu.setEng(sc.nextInt()); //영어
 					System.out.println("수학 점수를 입력하세요.");
-					stu.math = sc.nextInt(); //수학
+					stu.setMath(sc.nextInt()); //수학
 
-					stu.total = stu.lang + stu.eng + stu.math;
-					stu.avg = (double)stu.total/3;
+					stu.setTotal(stu.getLang() + stu.getEng() + stu.getMath());
+					stu.setAvg((double)stu.getTotal()/3);
 
 					students[i] = stu;
 
@@ -61,13 +61,13 @@ public class SchoolMain3 {
 			} else if(select==2) {
 				System.out.println("전체 성적을 조회합니다.");
 				for (i = 0; i <students.length; i++) {
-					System.out.println("이름 : "+students[i].name);
-					System.out.println("번호 : "+students[i].number);
-					System.out.println("국어 : "+students[i].lang);
-					System.out.println("영어 : "+students[i].eng);
-					System.out.println("수학 : "+students[i].math);
-					System.out.println("총점 : "+students[i].total);
-					System.out.println("평균 : "+students[i].avg);
+					System.out.println("이름 : "+students[i].getName());
+					System.out.println("번호 : "+students[i].getNumber());
+					System.out.println("국어 : "+students[i].getLang());
+					System.out.println("영어 : "+students[i].getEng());
+					System.out.println("수학 : "+students[i].getMath());
+					System.out.println("총점 : "+students[i].getTotal());
+					System.out.println("평균 : "+students[i].getAvg());
 					System.out.println("==========================");
 				}//for
 
@@ -76,14 +76,14 @@ public class SchoolMain3 {
 				select = sc.nextInt(); //검색할 학생의 번호
 				boolean flag = false;//false면 못 찾은 것
 				for(i = 0; i < students.length; i++) {
-					if (select == students[i].number) {
-						System.out.println("이름 : "+students[i].name);
-						System.out.println("번호 : "+students[i].number);
-						System.out.println("국어 : "+students[i].lang);
-						System.out.println("영어 : "+students[i].eng);
-						System.out.println("수학 : "+students[i].math);
-						System.out.println("총점 : "+students[i].total);
-						System.out.println("평균 : "+students[i].avg);
+					if (select == students[i].getNumber()) {
+						System.out.println("이름 : "+students[i].getName());
+						System.out.println("번호 : "+students[i].getNumber());
+						System.out.println("국어 : "+students[i].getLang());
+						System.out.println("영어 : "+students[i].getEng());
+						System.out.println("수학 : "+students[i].getMath());
+						System.out.println("총점 : "+students[i].getTotal());
+						System.out.println("평균 : "+students[i].getAvg());
 						System.out.println("==========================");
 
 						flag = true;
